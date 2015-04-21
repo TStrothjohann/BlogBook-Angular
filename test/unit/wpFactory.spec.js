@@ -8,10 +8,10 @@ describe("The WPCard Factory", function(){
 
   it("A card has a title", function(){
     
-    var url = "en.blog.wordpress.com"
-    var newCard = new WPCard(url);
+    var blog = "en.blog.wordpress.com"
+    var newCard = new WPCard(blog);
     
-    expect(newCard.title).toEqual("This April in Blogging U.: The Return of Writing 101!");
+    expect(newCard.title).toEqual("Social Media Icons Widget");
   });
 
 });

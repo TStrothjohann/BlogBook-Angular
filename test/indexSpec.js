@@ -8,12 +8,12 @@ describe('blogbook homepage', function() {
     expect(browser.getTitle()).toEqual('BlogBook');
   });
 
-  it('should show a post', function() {
+  it('shows posts', function() {
     expect(element.all(by.css('.items')).count()).toEqual(9);
   });
 
-  xit('should show the title of the post', function() {
-    expect(element.all(by.id('title')).first().getText()).toEqual('Reflections: Context Switching');
+  it('should show the title of each post', function() {
+    expect(element.all(by.binding('card.title')).first().getText()).toEqual('Pacman and Instagram');
   });
 
 });

@@ -1,7 +1,6 @@
 var wrapper = function($http){
-  var WPCard = function(blog, index){
+  var WPCard = function(url, index){
     this.initialize = function(){
-      var url = "https://public-api.wordpress.com/rest/v1.1/sites/" + blog + "/posts/";
       var blogData = $http.get(url);
       var self = this;
 

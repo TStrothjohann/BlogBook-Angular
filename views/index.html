@@ -14,32 +14,40 @@
   <script src="js/streamController.js"></script>
 </head>
 <body ng-controller="streamController">
-
   <div class="container">
     <div class="row">
-    <span class="logo col-md-4 col-md-offset-4">
-      <img src="img/logoblog.png" class="pic">
-    </span>
-  </div>
-      <div class="row">
-        <div role="tabpanel" class="col-md-12">
+      <span class="logo col-md-4 col-md-offset-4">
+        <img src="img/logoblog.png" class="pic">
+      </span>
+    </div>
+    <div class="row">
+      <div role="tabpanel" class="col-md-12">
         <!-- Nav tabs -->
-          <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a ng-click="resetFilter()" href="#home" id="home-tab" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-            <li role="presentation"><a href="#profile" id="profile-tab" aria-controls="profile" role="tab" data-toggle="tab">Makers</a></li>
-            <li role="presentation" class="dropdown"><a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents" aria-expanded="false">Date<span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
-                <li><a href="#dropdown1" tabindex="1" role="tab" id="dropdpwn1-tab" data-toggle="tab" aria-controls="dropdown1" ng-click="reverse=false">Ascending</a></li>
-                <li><a href="#dropdown2" tabindex="1" role="tab" id="dropdpwn2-tab" data-toggle="tab" aria-controls="dropdown2" ng-click="reverse=true">Descending</a></li>
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active">
+            <a ng-click="resetFilter()" href="#home" id="home-tab" aria-controls="home" role="tab" data-toggle="tab">Home</a>
+          </li>
+          <li role="presentation">
+            <a href="#profile" id="profile-tab" aria-controls="profile" role="tab" data-toggle="tab">Makers</a>
+          </li>
+          <li role="presentation" class="dropdown">
+            <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents" aria-expanded="false">Date<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+              <li>
+                <a href="#dropdown1" tabindex="1" role="tab" id="dropdpwn1-tab" data-toggle="tab" aria-controls="dropdown1" ng-click="reverse=false">Ascending</a>
               </li>
-                </ul>
+              <li>
+                <a href="#dropdown2" tabindex="1" role="tab" id="dropdpwn2-tab" data-toggle="tab" aria-controls="dropdown2" ng-click="reverse=true">Descending</a>
               </li>
             </ul>
+          </li>  
+        </ul>
           <!-- Tab panes -->
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active bg-info" id="home">
-              <p class="title">There are currently {{cards.length}} cool Makers Blogs registered on BlogBook</p>
-            </div>
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active bg-info" id="home">
+            <p class="title">There are currently {{cards.length}} cool Makers Blogs registered on BlogBook</p>
+          </div>
           <div role="tabpanel" class="tab-pane" id="profile">
             <div class="btn-group" data-toggle="buttons" ng-repeat="card in cards">
               <label class="btn btn-primary active peoplebutton" ng-click="setFilter($index)" >
@@ -51,20 +59,17 @@
       </div>
     </div>
     <!-- cards -->
-      <div class="row">
-
-
-          <div class="items panel col-md-6" ng-repeat="card in cards | filter:filters |orderBy:'date':!reverse">
-          <div class="block">
-            <h1>{{card.title}}</h1>
-            <p>by {{card.author}}</p>
-            <p>on {{card.date}}</p>
-            <img ng-src="{{card.photo}}" class="featured-image"/>
-            <p>{{card.text}}}</p>
-            <a href="{{card.link}}" target="__blank">read more</a>
-            </div>
-          </div>
-
-  </div>
+    <div class="row">
+      <div class="items panel col-md-6" ng-repeat="card in cards | filter:filters |orderBy:'date':!reverse">
+        <div class="block">
+          <h1>{{card.title}}</h1>
+          <p>by {{card.author}}</p>
+          <p>on {{card.date}}</p>
+          <img ng-src="{{card.photo}}" class="featured-image"/>
+          <p>{{card.text}}}</p>
+          <a href="{{card.link}}" target="__blank">read more</a>
+        </div>
+      </div>
+   </div>
 </body>
 </html>

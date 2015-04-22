@@ -6,7 +6,7 @@ describe("The WPCard Factory", function(){
     });
   });
 
-  it("A card has a title", function(){
+  xit("A card has a title", function(){
     
     var blog = "en.blog.wordpress.com"
     var newCard = new WPCard(blog);

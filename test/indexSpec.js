@@ -1,7 +1,7 @@
 describe('blogbook homepage', function() {
 
   beforeEach( function() {
-    browser.get('http://localhost:3000/');
+    browser.get('http://localhost:3000');
   })
 
   it('should have a title', function() {

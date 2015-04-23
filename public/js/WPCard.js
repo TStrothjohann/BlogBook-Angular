@@ -1,9 +1,9 @@
 var wrapper = function($http){
   var WPCard = function(url, index){
     this.initialize = function(){
+      
       var blogData = $http.get(url);
       var self = this;
-
       blogData.then(function(response){
         self.title = response.data.posts[index].title
         self.date = new Date(response.data.posts[index].date).toDateString();
@@ -25,4 +25,4 @@ var wrapper = function($http){
 
 angular
   .module('BlogBook')
-  .factory('WPCard', wrapper)
+  .factory('WPCard',  wrapper)

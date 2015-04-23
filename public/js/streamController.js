@@ -4,7 +4,7 @@ var streamController = function($scope, WPCard) {
   $scope.blogs = ['katebeavis.wordpress.com', 'joejknowles.wordpress.com', 'detachedhead.wordpress.com', 'thegeekleapforward.wordpress.com', 'en.blog.wordpress.com', 'em01blog.wordpress.com', 'sevenhoursbehind.wordpress.com', 'meganfolsom.wordpress.com', 'niccipell.wordpress.com'];
   $scope.calls = [];
 
-  
+  //Should become a service
   $scope.constructWPAPICalls = function(){
     for (var i = 0; i < $scope.blogs.length; i++) {
       var url = "https://public-api.wordpress.com/rest/v1.1/sites/" +  $scope.blogs[i] + "/posts/"
@@ -29,9 +29,6 @@ var streamController = function($scope, WPCard) {
     }
   };
 
-
-
-
   $scope.setFilter = function(index){
     $scope.filters = {author: $scope.cards[index].author}
   };
@@ -40,7 +37,7 @@ var streamController = function($scope, WPCard) {
     $scope.filters = {};
   };
 
-  //$scope.fillPage();
+  $scope.fillPage();
 
 };
 

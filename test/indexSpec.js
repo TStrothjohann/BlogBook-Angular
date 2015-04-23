@@ -4,7 +4,7 @@ describe('blogbook homepage', function() {
     browser.get('http://localhost:3000');
   })
 
-  it('should have a title', function() {
+  it('has a title', function() {
     expect(browser.getTitle()).toEqual('BlogBook');
   });
 

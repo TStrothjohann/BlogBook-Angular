@@ -11,8 +11,6 @@ app.get('/', function(request, response) {
   response.sendFile('index.html');
 });
 
-server.listen(3000, function() {
-  console.log('server listening on port 3000');
-});
+server.listen(process.env.PORT || 5000);
 
 module.exports = server;

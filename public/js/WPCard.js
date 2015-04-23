@@ -10,7 +10,12 @@ var wrapper = function($http){
         self.text = response.data.posts[index].excerpt.replace(/(<([^>]+)>)/ig,"");
         self.link = response.data.posts[index].URL
         self.author = response.data.posts[index].author.nice_name
-        self.photo = response.data.posts[index].featured_image || response.data.posts[index].attachments[Object.keys(response.data.posts[index].attachments)[0]].URL || ""
+        self.photo = response.data.posts[index].featured_image
+        if(self.photo == undefined && response.data.posts[index].attachments[Object.keys(response.data.posts[index].attachments)[0]].URL != undefined){
+          self.photo = response.data.posts[index].attachments[Object.keys(response.data.posts[index].attachments)[0]].URL
+        }else{
+          self.photo = ""
+        };
       });
     };
     this.initialize();

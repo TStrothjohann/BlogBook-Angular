@@ -40,7 +40,7 @@ var streamController = function($scope, WPCard) {
     $scope.filters = {};
   };
 
-  $scope.fillPage();
+  //$scope.fillPage();
 
 };
 

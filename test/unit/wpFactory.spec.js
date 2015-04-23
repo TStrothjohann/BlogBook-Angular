@@ -31,7 +31,7 @@ describe('WPCard', function() {
 
   it('displays content from API call', function(){
     var url = 'https://public-api.wordpress.com/rest/v1.1/sites/katebeavis.wordpress.com/posts/'
-    testCard = new WPCard(url)
+    testCard = new WPCard(url, 0)
     httpBackend.flush();
     expect(testCard.title).toEqual("Huhu World")    
   });

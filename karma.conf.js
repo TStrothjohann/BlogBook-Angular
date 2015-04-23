@@ -19,6 +19,7 @@ module.exports = function(config) {
       'public/js/angularApp.js',
       'public/js/streamController.js',
       'public/js/WPCard.js',
+      'public/js/RSSCard.js',
       'bower_components/angular-resource/angular-resource.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'bower_components/angular-route/angular-route.js',

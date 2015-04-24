@@ -9,7 +9,7 @@ BlogBook is a single page blog aggregator. It's based on an Express (node.js) se
 
 **Filters:** Users can filter the posts by author and sort by date.
 
-**Design:** It was my first experience with Bootstrap.
+**Design:** It was my first experience with Bootstrap. Nothing very special but repsonsive.
 
 ###ToDo
 *Admin-Backend:* So far you have to add new blogs to an array in the stream controller. I have different ideas how to change that:

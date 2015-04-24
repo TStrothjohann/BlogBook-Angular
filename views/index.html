@@ -13,6 +13,9 @@
   <script src="js/WPCard.js"></script>
   <script src="js/addLinkCtrl.js"></script>
   <script src="js/streamController.js"></script>
+  <script src="js/blogBookReady.js"></script>
+  <script src="masonry/dist/masonry.pkgd.min.js"></script>
+  <script src="imagesloaded/imagesloaded.pkgd.min.js"></script>
 </head>
 <body ng-controller="streamController">
   <div class="container">
@@ -61,14 +64,16 @@
     </div>
     <!-- cards -->
     <div class="row">
-      <div class="items panel col-md-6" ng-repeat="card in cards | filter:filters |orderBy:'date':!reverse">
-        <div class="block">
-          <h1>{{card.title}}</h1>
-          <p>by {{card.author}}</p>
-          <p>on {{card.date}}</p>
-          <img ng-src="{{card.photo}}" class="featured-image"/>
-          <p>{{card.text}}}</p>
-          <a href="{{card.link}}" target="__blank">read more</a>
+      <div id="card-container">
+        <div class="items panel col-md-6" ng-repeat="card in cards | filter:filters |orderBy:'date':!reverse">
+          <div class="block">
+            <h1>{{card.title}}</h1>
+            <p>by {{card.author}}</p>
+            <p>on {{card.date}}</p>
+            <img ng-src="{{card.photo}}" class="featured-image"/>
+            <p>{{card.text}}}</p>
+            <a href="{{card.link}}" target="__blank">read more</a>
+          </div>
         </div>
       </div>
    </div>

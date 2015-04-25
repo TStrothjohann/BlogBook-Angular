@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/TStrothjohann/blogbookJS/badges/gpa.svg)](https://codeclimate.com/github/TStrothjohann/blogbookJS)
+
 # BlogBook: An AngularJS Blog Aggregator
 
 BlogBook is a single page blog aggregator. It's based on an Express (node.js) server and written in AngularJS. I started it as a team project in *week 6* of Makers Academy and went back after the course to improve test coverage and to refactor. Originally we wanted to explore Angular's filter functions and gain experience in querying API content.

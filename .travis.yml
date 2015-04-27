@@ -4,6 +4,7 @@ node_js:
 
 before_install:
   - "npm install codeclimate-test-reporter"
+  - "npm install karma-cli"
 
 before_script:
   - npm install bower

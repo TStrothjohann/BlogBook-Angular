@@ -3,9 +3,7 @@ node_js:
   - "0.12"
 
 before_script:
-  # - export DISPLAY=:99.0
-  # - sh -e /etc/init.d/xvfb start
-  - npm install -g bower
+  - npm install bower
   - bower install
 
 script:
@@ -13,4 +11,4 @@ script:
 
 addons:
   code_climate:
-    repo_token: cd5f3133f76e0450d6404d1f5c50db9792e11dfe7023c6cb2cc88a4d0558a8b2
+    repo_token: ef2fe2e0aa88431f512290dcbfe6d43a4fb78e7a538e8a097d69459a1c499d99

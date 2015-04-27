@@ -1,6 +1,9 @@
 language: node_js
 node_js:
-  - "0.12"
+  - "0.10"
+
+before_install:
+  - "npm install codeclimate-test-reporter"
 
 before_script:
   - npm install bower
@@ -8,6 +11,9 @@ before_script:
 
 script:
   - npm test
+
+after_script:
+  - codeclimate < ./coverage/PhantomJS\ 1.9.8\ \(Windows\ 8\)/lcov.info
 
 addons:
   code_climate:

@@ -46,8 +46,11 @@ module.exports = function(config) {
       // specify a common output directory
       dir: 'coverage',
       reporters: [
-        { type: 'html', subdir: 'report-html' },
-        { type: 'lcov', subdir: 'lcov' }
+       {
+                        type: 'lcov',
+                        dir: 'coverage',
+                        print: 'detail'
+                      }
       ]
     },
 

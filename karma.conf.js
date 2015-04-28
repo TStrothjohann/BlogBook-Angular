@@ -44,14 +44,8 @@ module.exports = function(config) {
 
     coverageReporter: {
       // specify a common output directory
-      dir: 'coverage',
-      reporters: [
-       {
-                        type: 'lcov',
-                        dir: 'coverage',
-                        print: 'detail'
-                      }
-      ]
+      
+      reporters: [{ type: 'lcov' }]
     },
 
 

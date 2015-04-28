@@ -1,4 +1,6 @@
+[![Build Status](https://travis-ci.org/TStrothjohann/BlogBook-Angular.svg?branch=master)](https://travis-ci.org/TStrothjohann/BlogBook-Angular)
 [![Code Climate](https://codeclimate.com/github/TStrothjohann/blogbookJS/badges/gpa.svg)](https://codeclimate.com/github/TStrothjohann/blogbookJS)
+[![Test Coverage](https://codeclimate.com/github/TStrothjohann/BlogBook-Angular/badges/coverage.svg)](https://codeclimate.com/github/TStrothjohann/BlogBook-Angular)
 
 # BlogBook: An AngularJS Blog Aggregator
 
